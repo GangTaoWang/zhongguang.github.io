@@ -8,6 +8,22 @@
     <meta name="description" content="中广资本,证监会首批颁发认证的专业投资咨询机构,中国投资者最信赖的金融实战培训平台,专业的金融投资,证券投资,在线股票投资顾问平台。" data-vue-meta="true" data-vmid="description">
     <meta name="keywords" content="中广,中广资本,中广资本投股APP,金融投资,投资理财,证券投资顾问平台,手机炒股,股票软件,炒股软件，免费炒股软件，证券软件,行情软件" data-vue-meta="true" data-vmid="keywords">
     <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <script>
+        function loadImage(url, callback) {
+            var img =
+                new Image(); //创建一个Image对象，实现图片的预下载     
+            img.src = url;
+            if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数     
+                callback(img);
+                return; // 直接返回，不用再处理onload事件     
+            }
+            img.onload =
+                function() { //图片下载完毕时异步调用callback函数。         
+                    callback(img);
+                };
+        };
+        loadImage('https://s1.ax1x.com/2020/09/23/wjUW1P.jpg')
+    </script>
     <!-- cmc -->
     <!-- cdn.shhzcj.com/html/marketing_intro/index.html -->
 </head>
